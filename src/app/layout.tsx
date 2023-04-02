@@ -45,6 +45,7 @@ export default function RootLayout({
   };
   return (
     <html lang="en" className={inter.className}>
+      <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/4997/4997543.png" />
       <body>
         <Image
           src={Background}

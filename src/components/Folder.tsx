@@ -5,7 +5,7 @@ import {
   ChevronRight,
   ChevronDown,
   FolderOpen,
-  FolderIcon,
+  FolderClosed,
 } from "lucide-react";
 
 interface FolderProps {
@@ -36,7 +36,7 @@ export function Folder({ title, children, defaultOpen }: FolderProps) {
             className="stroke-[#908caa] group-hover:stroke-white"
           />
         ) : (
-          <FolderIcon
+          <FolderClosed
             size={18}
             className="stroke-[#908caa] group-hover:stroke-white"
           />

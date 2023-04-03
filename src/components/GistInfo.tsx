@@ -1,5 +1,6 @@
 import shiki from "shiki";
 import { Code } from "./Code";
+import CopyBtn from "./CopyBtn";
 interface GistProps {
   GistURL: string;
   lang: string;
@@ -15,8 +16,10 @@ export default async function GistInfo({ GistURL, lang }: GistProps) {
   const code = Highlight.codeToHtml(responseToTxt, { lang });
 
   return (
-    <div className="flex flex-1 scrollbar-thin scrollbar-thumb-[#2b2838] scrollbar-track-inherit overflow-y-scroll h-[95%]">
+    <div className="flex flex-1 scrollbar-thin scrollbar-thumb-[#2b2838] scrollbar-track-inherit overflow-y-scroll h-[95%] justify-between">
       <Code code={code} />
+
+      <CopyBtn code={responseToTxt}/>
     </div>
   );
 }

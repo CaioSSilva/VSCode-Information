@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Background from "../assets/BackGround.png";
 import Draggable, { DraggableData } from "react-draggable";
 import Image from "next/image";
 import Link from "next/link";
@@ -44,8 +45,14 @@ export default function RootLayout({
   };
   return (
     <html lang="en" className={inter.className}>
-      <link rel="shortcut icon" href="https://raw.githubusercontent.com/CaioSSilva/VSCode-Information/main/src/assets/vscode.png" />
       <body>
+        <Image
+          src={Background}
+          alt=""
+          fill={true}
+          quality={80}
+          className="object-cover"
+        />
         <div
           className="relative h-screen flex overflow-clip"
           style={{ padding: maximize ? "0px" : "25px" }}
